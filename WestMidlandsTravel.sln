@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestMidlandsTravel", "WestMidlandsTravel\WestMidlandsTravel.csproj", "{A7E46777-FF61-4DD7-8316-D5D9059764F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestMidlandsTravel", "WestMidlandsTravel\WestMidlandsTravel.csproj", "{D5FE6C73-1AB8-442A-A185-870F3FB37A8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A7E46777-FF61-4DD7-8316-D5D9059764F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7E46777-FF61-4DD7-8316-D5D9059764F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7E46777-FF61-4DD7-8316-D5D9059764F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7E46777-FF61-4DD7-8316-D5D9059764F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FE6C73-1AB8-442A-A185-870F3FB37A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FE6C73-1AB8-442A-A185-870F3FB37A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FE6C73-1AB8-442A-A185-870F3FB37A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FE6C73-1AB8-442A-A185-870F3FB37A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
