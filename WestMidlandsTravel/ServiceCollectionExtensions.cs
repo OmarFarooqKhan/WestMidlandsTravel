@@ -1,6 +1,7 @@
 using Microsoft.OpenApi.Models;
-using WestMidlandsTravel.BusinessLayer;
-using WestMidlandsTravel.Http;
+using WestMidlandsTravel.Integrations.GTFSRealTime.Http;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.Http;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
 using WestMidlandsTravel.Startup.Configuration;
 
 namespace WestMidlandsTravel;
@@ -23,12 +24,14 @@ public static class ServiceCollectionExtensions
         builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
         builder.Configuration.AddEnvironmentVariables();
 
-        builder.Services.Configure<WestMidlandsTransportOptions>(builder.Configuration.GetSection("WestMidlandsTransport"));
+        builder.Services.Configure<WestMidlandsTransportOptions>(builder.Configuration.GetSection("TransportIntegrations:WestMidlandsTransport"));
+        builder.Services.Configure<GtfsRealtimeOptions>(builder.Configuration.GetSection("TransportIntegrations:GtfsRealtime"));
     }
 
     public static void RegisterHttpClients(this IServiceCollection service)
     {
         service.AddHttpClient<IWestMidlandsRouteHttpClient, WestMidlandsRouteLineHttpClient>();
         service.AddHttpClient<IWestMidlandsStopHttpClient, WestMidlandsStopHttpClient>();
+        service.AddHttpClient<IGtfsRealTimeHttpClient, GtfsRealTimeHttpClient>();
     }
 }
