@@ -1,8 +1,7 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
-using WestMidlandsTravel.BusinessLayer;
-using WestMidlandsTravel.Models.ApiModels;
-using WestMidlandsTravel.Models.ApiModels.WestMidlands.Response;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
 
 namespace WestMidlandsTravel.Controllers;
 
@@ -35,6 +34,4 @@ public class BusRouteController : CustomController
         var output = await _routeService.FetchRoutesByLineId(lineId);
         return Ok(output);
     }
-    
-    
 }

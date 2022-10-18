@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using WestMidlandsTravel.BusinessLayer;
-using WestMidlandsTravel.Models.ApiModels.WestMidlands.Response.StopPoint;
+using WestMidlandsTravel.Integrations.GTFSRealTime.Http;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels.StopPoint;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
 
 namespace WestMidlandsTravel.Controllers;
 
