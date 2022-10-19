@@ -1,7 +1,5 @@
 # WestMidlandsTravel
   ![DotNet](https://github.com/OmarFarooqKhan/WestMidlandsTravel/actions/workflows/dotnet.yml/badge.svg)
-    ![dependency](https://github.com/OmarFarooqKhan/WestMidlandsTravel/actions/workflows/dependency-review.yml/badge.svg)
-
 
 This project integrates several API's that provide information for the West Midlands transport network.
 
