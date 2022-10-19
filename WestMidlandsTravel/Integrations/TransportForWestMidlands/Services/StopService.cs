@@ -1,4 +1,5 @@
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.Http;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels.StopPoint;
 
 namespace WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
@@ -12,11 +13,10 @@ public class StopService : IStopService
         _stopHttpClient = stopHttpClient;
     }
     
-    public async Task<IEnumerable<StopPoint>> GetStopPredictionsAsync(string stopId)
+    public async Task<IEnumerable<Prediction>> GetStopPredictionsAsync(string stopId)
     {
         var response = await _stopHttpClient.GetPredictions(stopId);
-        var stopPoints =  response.ArrayOfStopPoint.StopPoint;
-        return stopPoints;
+        return response.Data.ListOfPredictions;
     }
 
     public async Task<IEnumerable<StopPoint>> GetStopPointsAsync(string lineId)
