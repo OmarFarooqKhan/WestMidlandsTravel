@@ -13,8 +13,13 @@ public class BusUpdatesController : CustomController
         _logger = logger;
         _httpClient = httpClient;
     }
+    
+    /// <summary>
+    /// Gets a snapshot of the current bus network
+    /// </summary>
+    /// <returns></returns>
     [HttpGet("tripupdates/")]
-    [ResponseCache(Duration = 30)]
+    [ResponseCache(Duration = 120)]
     public async Task<IActionResult> GetStopPredictions()
     {
         var response = await _httpClient.GetAsync("trip_updates");

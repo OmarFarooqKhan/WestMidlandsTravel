@@ -4,6 +4,6 @@ namespace WestMidlandsTravel.Integrations.TransportForWestMidlands.Http;
 
 public interface IWestMidlandsRouteHttpClient
 {
-   Task<WestMidlandsRouteResponse> GetAllRoutes();
+   Task<WestMidlandsRouteResponse> GetLines();
    Task<WestMidlandsRouteResponse> GetRoutesForLine(string lineId);
 }

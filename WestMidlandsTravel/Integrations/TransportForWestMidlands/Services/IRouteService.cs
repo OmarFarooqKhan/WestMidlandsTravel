@@ -4,6 +4,6 @@ namespace WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
 
 public interface IRouteService
 {
-    Task<IEnumerable<Line>> FetchAllRoutes();
+    Task<IEnumerable<Line>> FetchAllLines();
     Task<WestMidlandsRouteResponse>FetchRoutesByLineId(string lineId);
 }
