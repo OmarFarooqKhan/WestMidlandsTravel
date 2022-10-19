@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels.StopPoint;
 using WestMidlandsTravel.Startup.Configuration;
 
@@ -12,9 +13,9 @@ public class WestMidlandsStopHttpClient : BaseWestMidlandsHttpClient, IWestMidla
     {
     }
 
-    public async Task<WestMidlandsStopPointResponse> GetPredictions(string lineId)
+    public async Task<WestMidlandsPredictionsResponse> GetPredictions(string lineId)
     {
-      return await Get<WestMidlandsStopPointResponse>(RoutePrefix, $"{lineId}/Arrivals");
+      return await Get<WestMidlandsPredictionsResponse>(RoutePrefix, $"{lineId}/Arrivals");
     }
 
     public async Task<WestMidlandsStopPointResponse> GetStopPoints(string lineId)

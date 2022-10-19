@@ -2,8 +2,8 @@ using Newtonsoft.Json;
 
 namespace WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
 
-public class ArrayOfPrediction
+public class Predictions
 {
     [JsonProperty("Prediction")]
-    public List<string> Prediction { get; set; }
+    public IEnumerable<Prediction> ListOfPredictions { get; init; }
 }

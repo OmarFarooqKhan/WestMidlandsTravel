@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WestMidlandsTravel.Integrations.GTFSRealTime.Http;
+using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels.StopPoint;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
 
@@ -22,7 +23,7 @@ public class BusStopController : CustomController
     /// <param name="stopId"></param>
     /// <returns></returns>
     [HttpGet("prediction/{stopId}")]
-    [ProducesResponseType(typeof(IEnumerable<StopPoint>), 200)]
+    [ProducesResponseType(typeof(IEnumerable<Prediction>), 200)]
     [ResponseCache(Duration = 30)]
     public async Task<IActionResult> GetStopPredictions(string stopId)
     {
