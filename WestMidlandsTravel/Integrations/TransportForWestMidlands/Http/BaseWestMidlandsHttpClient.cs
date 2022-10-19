@@ -27,16 +27,12 @@ public class BaseWestMidlandsHttpClient
         var definedRoute = SetupRouteQuery(routePrefix, route);
         try
         {
-          //  var response = await _client.GetAsync(definedRoute);
-          //  response.EnsureSuccessStatusCode();
-          //  var responseString = await response.Content.ReadAsStringAsync();
-          var path =
-              "/Users/omar/RiderProjects/WestMidlandsTravel/WestMidlandsTravel/Integrations/TransportForWestMidlands/Http/response.json";
-          var movie1 = JsonConvert.DeserializeObject<T>(await File.ReadAllTextAsync(path));
+            var response = await _client.GetAsync(definedRoute);
+            response.EnsureSuccessStatusCode();
+            var responseString = await response.Content.ReadAsStringAsync();
+            var westMidlandsResponse = JsonConvert.DeserializeObject<T>(responseString);
 
-//            var westMidlandsRouteResponse = JsonConvert.DeserializeObject<T>();
-
-            return movie1;
+            return westMidlandsResponse;
         }
         catch(TaskCanceledException ex)
         {
