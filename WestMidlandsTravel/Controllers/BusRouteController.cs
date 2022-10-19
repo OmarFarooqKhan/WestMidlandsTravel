@@ -16,16 +16,26 @@ public class BusRouteController : CustomController
         _routeService = routeService;
     }
 
-    [HttpGet("allRoutes")]
+    /// <summary>
+    /// Gets all Lines.
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("allLines")]
     [ProducesResponseType(typeof(Line), (int)HttpStatusCode.OK)]
     [ResponseCache(Duration = 30)]
-    public async Task<IActionResult> GetAllRoutes()
+    public async Task<IActionResult> GetAllLines()
     {
-        var output = await _routeService.FetchAllRoutes();
+        var output = await _routeService.FetchAllLines();
         
         return Ok(output);
     }
     
+    
+    /// <summary>
+    /// Gets a Route for a specific LineId.
+    /// </summary>
+    /// <param name="lineId"></param>
+    /// <returns></returns>
     [HttpGet("{lineId}")]
     [ProducesResponseType(typeof(WestMidlandsRouteResponse), 200)]
     [ResponseCache(Duration = 30)]

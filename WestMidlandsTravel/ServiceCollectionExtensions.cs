@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.OpenApi.Models;
 using WestMidlandsTravel.Integrations.GTFSRealTime.Http;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.Http;
@@ -13,6 +14,8 @@ public static class ServiceCollectionExtensions
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "WestMidlandsTravel.Startup", Version = "v1" });
+            var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
         });
 
         services.AddSingleton<IRouteService, RouteService>();

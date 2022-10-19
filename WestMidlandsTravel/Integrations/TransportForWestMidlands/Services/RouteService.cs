@@ -11,9 +11,9 @@ public class RouteService : IRouteService
     {
         _routeHttpClient = routeHttpClient;
     }
-    public async Task<IEnumerable<Line>> FetchAllRoutes()
+    public async Task<IEnumerable<Line>> FetchAllLines()
     {
-        var route = await _routeHttpClient.GetAllRoutes();
+        var route = await _routeHttpClient.GetLines();
        var allRoutes = route.ArrayOfLine.Line; 
        return allRoutes;
     }

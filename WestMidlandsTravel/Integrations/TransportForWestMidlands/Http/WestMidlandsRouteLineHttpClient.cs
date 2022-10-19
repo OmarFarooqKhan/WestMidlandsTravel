@@ -13,7 +13,7 @@ public class WestMidlandsRouteLineHttpClient : BaseWestMidlandsHttpClient, IWest
     {
     }
 
-    public async Task<WestMidlandsRouteResponse> GetAllRoutes()
+    public async Task<WestMidlandsRouteResponse> GetLines()
     {
         return await Get<WestMidlandsRouteResponse>(RoutePrefix,"Route/");
     }
