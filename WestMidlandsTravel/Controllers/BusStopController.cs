@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using WestMidlandsTravel.Integrations.GTFSRealTime.Http;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.ResponseModels.StopPoint;
 using WestMidlandsTravel.Integrations.TransportForWestMidlands.Services;
@@ -31,7 +30,7 @@ public class BusStopController : CustomController
         _logger.LogInformation("Successfully retrieved stop predictions for stopId {stopId}", stopId);
         return Ok(output);
     }
-    
+
     /// <summary>
     /// Get the list of stops for a specific lineId.
     /// </summary>

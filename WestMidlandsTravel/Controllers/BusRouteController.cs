@@ -26,11 +26,10 @@ public class BusRouteController : CustomController
     public async Task<IActionResult> GetAllLines()
     {
         var output = await _routeService.FetchAllLines();
-        
         return Ok(output);
     }
-    
-    
+
+
     /// <summary>
     /// Gets a Route for a specific LineId.
     /// </summary>
