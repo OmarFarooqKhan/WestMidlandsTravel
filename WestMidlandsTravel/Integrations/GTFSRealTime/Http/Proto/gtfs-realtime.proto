@@ -626,7 +626,7 @@ message TranslatedString {
     // The extensions namespace allows 3rd-party developers to extend the
     // GTFS Realtime Specification in order to add and evaluate new features and
     // modifications to the spec.
-    extensions 1000 to 1999;
+    extensions 1000 to 1999; 
   }
   // At least one translation must be provided.
   repeated Translation translation = 1;
