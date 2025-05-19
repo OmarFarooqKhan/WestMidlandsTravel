@@ -15,7 +15,7 @@ public class BusUpdatesController : CustomController
     }
 
     /// <summary>
-    /// Gets a snapshot of the current bus network
+    /// Gets a paged Snapshot of the current network
     /// </summary>
     /// <returns></returns>
     [HttpGet("tripupdates/")]
@@ -28,7 +28,7 @@ public class BusUpdatesController : CustomController
     }
 
     /// <summary>
-    /// Gets a tripId
+    /// Gets a tripId from the current network based on a routeId.
     /// </summary>
     /// <returns></returns>
     [HttpGet("tripId/")]
